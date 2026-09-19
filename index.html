@@ -368,6 +368,8 @@ a.chap:hover .cn{color:var(--accent)}
 
 <style>
 /* ===== access gate (this hosted copy only) ===== */
+/* the hidden attribute must beat every rule below, including #id selectors */
+[hidden]{display:none!important}
 #gate{
   position:fixed;inset:0;z-index:999;background:var(--ground);
   display:flex;align-items:center;justify-content:center;padding:24px;
