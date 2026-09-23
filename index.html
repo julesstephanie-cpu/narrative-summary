@@ -167,13 +167,13 @@ hr{border:none;border-top:1px solid var(--border);margin:34px 0}
 @media (max-width:900px){.cover-grid{grid-template-columns:1fr;gap:30px}}
 
 /* ============ STATS ============ */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:28px 0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:28px 0}
 .stats>div{padding:17px 18px;border-right:1px solid var(--border);background:var(--surface)}
 .stats>div:last-child{border-right:none}
 @media (max-width:820px){
-  .stats{grid-template-columns:1fr 1fr}
-  .stats>div:nth-child(2n){border-right:none}
-  .stats>div:nth-child(-n+2){border-bottom:1px solid var(--border)}
+  .stats{grid-template-columns:1fr}
+  .stats>div{border-right:none;border-bottom:1px solid var(--border)}
+  .stats>div:last-child{border-bottom:none}
 }
 @media (max-width:420px){
   .stats{grid-template-columns:1fr}
@@ -342,6 +342,10 @@ a.chap:hover .cn{color:var(--accent)}
 .toc li.live .cs{background:var(--good-soft);color:var(--good)}
 .toc li.prod .cs{background:var(--warn-soft);color:var(--warn)}
 .toc li.this .cs{background:var(--accent-soft);color:var(--accent)}
+.toc li.sep{background:var(--surface)}
+.toc li.sep .row{grid-template-columns:1fr;padding:12px 4px}
+.toc .seplabel{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.toc .seplabel span{font-family:"Source Serif 4",Georgia,serif;font-weight:400;letter-spacing:0;text-transform:none;color:var(--ink-3);font-size:14px}
 @media (max-width:620px){
   .toc a,.toc .row{grid-template-columns:48px 1fr;gap:12px}
   .toc .cs{grid-column:2;justify-self:start;margin-top:8px}
@@ -470,7 +474,6 @@ a.chap:hover .cn{color:var(--accent)}
   <div class="stats">
     <div class="stat"><span class="v">$1.5M</span><span class="l">Committed to date</span></div>
     <div class="stat"><span class="v a">$30M</span><span class="l">Raise now underway</span></div>
-    <div class="stat"><span class="v">3</span><span class="l">Efforts already live in the field</span></div>
     <div class="stat"><span class="v">2</span><span class="l">Independent proof points for the model</span></div>
   </div>
 
@@ -479,9 +482,21 @@ a.chap:hover .cn{color:var(--accent)}
     <p>This is the executive summary of a donor book. The chapters below contain research, legal architecture, capital strategy, hiring schedule, and state-by-state budgets. Each section links to the corresponding chapters.</p>
   </div>
 
-  <div class="pull" style="max-width:52ch">
-    <q>The majority already exists. It needs a platform.</q>
+  <div class="pull" style="max-width:52ch;margin:34px 0 26px">
+    <q>The majority already exists. It needs a platform. We hope you will help us build it.</q>
     <span class="src">The 80</span>
+  </div>
+
+  <div class="prose">
+    <h3>What the name means</h3>
+    <p>Our name claims the <strong>eighty percent of Americans who agree on the majority of policy</strong> and want the same handful of things. That common ground runs through most of the Democratic Party. It lives in the center-left, and it includes independents, moderates, and a great many people who tuned out because nothing on offer sounded like them.</p>
+  </div>
+
+  <div class="grid g4">
+    <div class="card"><span class="idx">01</span><span class="hd">Affordability</span><p>An affordable path to live their lives.</p></div>
+    <div class="card"><span class="idx">02</span><span class="hd">Safety</span><p>Safety from threats at home and abroad.</p></div>
+    <div class="card"><span class="idx">03</span><span class="hd">Competent government</span><p>Trust that government works and is not for sale.</p></div>
+    <div class="card"><span class="idx">04</span><span class="hd">A real shot</span><p>Confidence that their children have one.</p></div>
   </div>
 </section>
 
@@ -531,42 +546,47 @@ a.chap:hover .cn{color:var(--accent)}
     <li class="prod">
       <a href="#" data-chapter="05" aria-disabled="true">
         <span class="cn">05</span>
-        <span><span class="tt">State Selection &amp; Sequencing</span><span class="td">The four criteria applied, the three tracks, and how the funding sequence is set.</span></span>
+        <span><span class="tt">Budget, ROI &amp; Reporting</span><span class="td">The consolidated budget, the return model and its assumptions, and the reporting cadence donors receive.</span></span>
         <span class="cs">In production</span>
       </a>
     </li>
     <li class="prod">
       <a href="#" data-chapter="06" aria-disabled="true">
         <span class="cn">06</span>
+        <span><span class="tt">Team &amp; Governance</span><span class="td">Who is accountable for what, the senior team already in place, and the governance structure above it.</span></span>
+        <span class="cs">In production</span>
+      </a>
+    </li>
+    <li class="sep">
+      <div class="row">
+        <span class="seplabel">Appendices <span>— reference material, read as needed</span></span>
+      </div>
+    </li>
+    <li class="prod">
+      <a href="#" data-chapter="A" aria-disabled="true">
+        <span class="cn">A</span>
+        <span><span class="tt">State Selection &amp; Sequencing</span><span class="td">The four criteria applied, the three tracks, and how the funding sequence is set.</span></span>
+        <span class="cs">In production</span>
+      </a>
+    </li>
+    <li class="prod">
+      <a href="#" data-chapter="B" aria-disabled="true">
+        <span class="cn">B</span>
         <span><span class="tt">State Models — Pilot First</span><span class="td">Fully costed models per state: organizer counts, regional-lead management layers, phased budgets, and timelines.</span></span>
         <span class="cs">In production</span>
       </a>
     </li>
     <li class="prod">
-      <a href="#" data-chapter="07" aria-disabled="true">
-        <span class="cn">07</span>
+      <a href="#" data-chapter="C" aria-disabled="true">
+        <span class="cn">C</span>
         <span><span class="tt">Legal Structure &amp; Compliance</span><span class="td">The 501(c)(4) architecture, entity relationships, campaign-finance treatment by jurisdiction, and disclosure practice.</span></span>
         <span class="cs">In production</span>
       </a>
     </li>
     <li class="prod">
-      <a href="#" data-chapter="08" aria-disabled="true">
-        <span class="cn">08</span>
-        <span><span class="tt">Budget, ROI &amp; Reporting</span><span class="td">The consolidated budget, the return model and its assumptions, and the reporting cadence donors receive.</span></span>
-        <span class="cs">In production</span>
-      </a>
-    </li>
-    <li class="prod">
-      <a href="#" data-chapter="09" aria-disabled="true">
-        <span class="cn">09</span>
+      <a href="#" data-chapter="D" aria-disabled="true">
+        <span class="cn">D</span>
         <span><span class="tt">Research &amp; Public Opinion</span><span class="td">The evidence behind the eighty percent — real-time polling, message testing, and synthetic-persona research.</span></span>
-        <span class="cs">In production</span>
-      </a>
-    </li>
-    <li class="prod">
-      <a href="#" data-chapter="10" aria-disabled="true">
-        <span class="cn">10</span>
-        <span><span class="tt">Team &amp; Governance</span><span class="td">Who is accountable for what, the senior team already in place, and the governance structure above it.</span></span>
         <span class="cs">In production</span>
       </a>
     </li>
@@ -577,9 +597,7 @@ a.chap:hover .cn{color:var(--accent)}
     <p>Every chapter link that is not yet live carries a <code>data-chapter</code> number and an empty <code>data-href</code> on the pill, and an <code>href="#"</code> in the contents table above. Fill those in as each chapter publishes; the "In production" badge should become "Live" at the same time.</p>
   </div>
 
-  <div class="pull" style="max-width:46ch">
-    <q>The majority already exists, but it requires a platform. We hope you will help us build it.</q>
-  </div>
+  <p class="lead prose" style="margin-top:30px">The chapters above are the plan. This summary is the case for reading them.</p>
 
   <div class="disclosure">
     <p><strong>Disclosure.</strong> This document is for internal and donor-facing informational purposes. Contributions to REAL Action for America (The 80) support activities that further educational and social welfare purposes but may be used to support partisan political activities. <strong>Contributions to 501(c)(4) organizations are not deductible for federal income tax purposes as charitable contributions.</strong></p>
@@ -667,22 +685,10 @@ a.chap:hover .cn{color:var(--accent)}
     <figcaption><b>Source:</b> The 80 / C4 Framework V2, §1 (The Thesis). Duration bars run from each founding year to the present; all five organizations remain active. The center-left band is a schematic of the cycle-to-cycle funding pattern, not a count of specific organizations.</figcaption>
   </figure>
 
-  <div class="prose">
-    <h3>What the name means</h3>
-    <p>Our name claims the <strong>eighty percent of Americans who agree on the majority of policy</strong> and want the same handful of things. That common ground runs through most of the Democratic Party. It lives in the center-left, and it includes independents, moderates, and a great many people who tuned out because nothing on offer sounded like them.</p>
-  </div>
-
-  <div class="grid g4">
-    <div class="card"><span class="idx">01</span><span class="hd">Affordability</span><p>An affordable path to live their lives.</p></div>
-    <div class="card"><span class="idx">02</span><span class="hd">Safety</span><p>Safety from threats at home and abroad.</p></div>
-    <div class="card"><span class="idx">03</span><span class="hd">Competent government</span><p>Trust that government works and is not for sale.</p></div>
-    <div class="card"><span class="idx">04</span><span class="hd">A real shot</span><p>Confidence that their children have one.</p></div>
-  </div>
-
   <div class="chapbar">
     <span class="ck">Goes deeper in</span>
     <div class="chaplist">
-      <span class="chap todo" data-chapter="09" data-href=""><span class="cn">09</span>Research &amp; Public Opinion<span class="cs">In production</span></span>
+      <span class="chap todo" data-chapter="D" data-href=""><span class="cn">D</span>Research &amp; Public Opinion<span class="cs">In production</span></span>
       <span class="chap todo" data-chapter="01" data-href=""><span class="cn">01</span>Civic &amp; Political<span class="cs">In production</span></span>
     </div>
   </div>
@@ -692,7 +698,7 @@ a.chap:hover .cn{color:var(--accent)}
 <section class="wrap page" id="gap">
   <div class="folio"><span class="no">02</span><span class="nm">The Gap</span><span class="of">Executive Summary · 2 of 7</span></div>
 
-  <h3>Three structural problems prevent the model from replicating itself</h3>
+  <h3>Three structural problems have limited the effectiveness of the Democratic Party</h3>
   <div class="grid g3">
     <div class="card fill">
       <span class="idx">PROBLEM 01</span>
@@ -715,7 +721,7 @@ a.chap:hover .cn{color:var(--accent)}
     <span class="ck">Goes deeper in</span>
     <div class="chaplist">
       <span class="chap todo" data-chapter="04" data-href=""><span class="cn">04</span>Capital &amp; Operational Support<span class="cs">In production</span></span>
-      <span class="chap todo" data-chapter="07" data-href=""><span class="cn">07</span>Legal Structure &amp; Compliance<span class="cs">In production</span></span>
+      <span class="chap todo" data-chapter="C" data-href=""><span class="cn">C</span>Legal Structure &amp; Compliance<span class="cs">In production</span></span>
     </div>
   </div>
 </section>
@@ -732,7 +738,7 @@ a.chap:hover .cn{color:var(--accent)}
   <!-- MICHIGAN -->
   <h3 style="margin-top:38px">Proof point one — Project 83, Michigan</h3>
   <div class="prose">
-    <p>In 2017, Michigan Democratic Party Chair Lavora Barnes launched <strong>Project 83</strong> — named for Michigan's 83 counties — on three tenets: refocus on local parties and local candidates, retrain local leadership and grassroots activists, rebuild the Democratic brand in communities the party had ceded. Not a cycle-specific field program: a standing network of regional Political Specialists working year-round.</p>
+    <p>In 2017, Michigan Democratic Party Chair Lavora Barnes (The 80 cofounder) launched <strong>Project 83</strong> — named for Michigan's 83 counties — on three tenets: refocus on local parties and local candidates, retrain local leadership and grassroots activists, rebuild the Democratic brand in communities the party had ceded. Not a cycle-specific field program: a standing network of regional Political Specialists working year-round.</p>
   </div>
 
   <figure>
@@ -845,7 +851,7 @@ a.chap:hover .cn{color:var(--accent)}
   <div class="chapbar">
     <span class="ck">Goes deeper in</span>
     <div class="chaplist">
-      <span class="chap todo" data-chapter="06" data-href=""><span class="cn">06</span>State Models — Pilot First<span class="cs">In production</span></span>
+      <span class="chap todo" data-chapter="B" data-href=""><span class="cn">B</span>State Models — Pilot First<span class="cs">In production</span></span>
       <span class="chap todo" data-chapter="01" data-href=""><span class="cn">01</span>Civic &amp; Political<span class="cs">In production</span></span>
     </div>
   </div>
@@ -892,7 +898,7 @@ a.chap:hover .cn{color:var(--accent)}
     <div class="chaplist">
       <a class="chap live" href="https://claude.ai/artifact/TKMieGDahzwwgc8UwzzzBY" target="_blank" rel="noopener"><span class="cn">02</span>The 80 Engine<span class="cs">Live</span></a>
       <a class="chap live" href="https://julesstephanie-cpu.github.io/eighty-influencer/#brief" target="_blank" rel="noopener"><span class="cn">03</span>The Influencer Network<span class="cs">Live</span></a>
-      <span class="chap todo" data-chapter="07" data-href=""><span class="cn">07</span>Legal Structure &amp; Compliance<span class="cs">In production</span></span>
+      <span class="chap todo" data-chapter="C" data-href=""><span class="cn">C</span>Legal Structure &amp; Compliance<span class="cs">In production</span></span>
     </div>
   </div>
 </section>
@@ -926,8 +932,8 @@ a.chap:hover .cn{color:var(--accent)}
   <div class="chapbar">
     <span class="ck">Goes deeper in</span>
     <div class="chaplist">
-      <span class="chap todo" data-chapter="05" data-href=""><span class="cn">05</span>State Selection &amp; Sequencing<span class="cs">In production</span></span>
-      <span class="chap todo" data-chapter="06" data-href=""><span class="cn">06</span>State Models — Pilot First<span class="cs">In production</span></span>
+      <span class="chap todo" data-chapter="A" data-href=""><span class="cn">A</span>State Selection &amp; Sequencing<span class="cs">In production</span></span>
+      <span class="chap todo" data-chapter="B" data-href=""><span class="cn">B</span>State Models — Pilot First<span class="cs">In production</span></span>
     </div>
   </div>
 </section>
@@ -1016,9 +1022,9 @@ a.chap:hover .cn{color:var(--accent)}
   <div class="chapbar">
     <span class="ck">Goes deeper in</span>
     <div class="chaplist">
-      <span class="chap todo" data-chapter="06" data-href=""><span class="cn">06</span>State Models — Pilot First<span class="cs">In production</span></span>
+      <span class="chap todo" data-chapter="B" data-href=""><span class="cn">B</span>State Models — Pilot First<span class="cs">In production</span></span>
       <a class="chap live" href="https://claude.ai/artifact/TKMieGDahzwwgc8UwzzzBY" target="_blank" rel="noopener"><span class="cn">02</span>The 80 Engine<span class="cs">Live</span></a>
-      <span class="chap todo" data-chapter="10" data-href=""><span class="cn">10</span>Team &amp; Governance<span class="cs">In production</span></span>
+      <span class="chap todo" data-chapter="B" data-href=""><span class="cn">06</span>Team &amp; Governance<span class="cs">In production</span></span>
     </div>
   </div>
 </section>
@@ -1101,11 +1107,6 @@ a.chap:hover .cn{color:var(--accent)}
     <p>The 80 targets a return in excess of any 10× benchmark, measured against the cost of rebuilding equivalent capability from scratch each cycle. <strong>The underlying model, assumptions, and reporting cadence sit in the Budget, ROI &amp; Reporting chapter</strong>.</p>
   </div>
 
-  <div class="pull right">
-    <q>By the last page, you will know what we intend to build in each state, who is accountable for it, and what it costs.</q>
-    <span class="src">David Pachter · CEO</span>
-  </div>
-
   <div class="prose">
     <h3>What this framework unlocks next</h3>
     <p>With this scaffolding in place, the next step is building individual, fully costed state models — organizer counts, regional-lead management layers, phased budgets, and timelines — for each state on the priority track, starting with the pilot. Each state model will:</p>
@@ -1124,9 +1125,9 @@ a.chap:hover .cn{color:var(--accent)}
   <div class="chapbar">
     <span class="ck">Goes deeper in</span>
     <div class="chaplist">
-      <span class="chap todo" data-chapter="08" data-href=""><span class="cn">08</span>Budget, ROI &amp; Reporting<span class="cs">In production</span></span>
+      <span class="chap todo" data-chapter="A" data-href=""><span class="cn">05</span>Budget, ROI &amp; Reporting<span class="cs">In production</span></span>
       <span class="chap todo" data-chapter="04" data-href=""><span class="cn">04</span>Capital &amp; Operational Support<span class="cs">In production</span></span>
-      <span class="chap todo" data-chapter="10" data-href=""><span class="cn">10</span>Team &amp; Governance<span class="cs">In production</span></span>
+      <span class="chap todo" data-chapter="B" data-href=""><span class="cn">06</span>Team &amp; Governance<span class="cs">In production</span></span>
     </div>
   </div>
 </section>
